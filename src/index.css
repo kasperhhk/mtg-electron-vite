@@ -5,3 +5,37 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.hand-content {
+  border-width: 1px;
+  border-color: black;
+  border-style: dashed;
+  background-color: rgb(235, 233, 233);
+
+  padding: 0.25em;
+
+  margin-top: 0.25em;
+
+  display: flex;
+}
+
+.card {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+
+  background-color: rgb(160, 131, 114);
+
+  margin: 0.5em;
+  padding: 0.25em;
+  min-width: 100px;
+  min-height: 110px;
+}
+
+.card:hover {
+  background-color: rgb(151, 115, 94);
+}
+
+.card:active {
+  background-color: rgb(206, 158, 131);
+}
