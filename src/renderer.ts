@@ -27,19 +27,8 @@
  */
 
 import './index.css';
+import { init } from './ui';
 
 console.log('👋 This message is being logged by "renderer.ts", included via Vite');
 
-const allcards = document.querySelectorAll('.card');
-allcards.forEach(card => {
-  const htmlelement = card as HTMLElement;
-  const cardName = htmlelement.dataset.name;
-  const cardId = htmlelement.dataset.id;
-
-  htmlelement.addEventListener('click', async e => {
-    console.log('clicked card', cardId, cardName);
-    const api = (<any>window)['electronAPI'];
-    const response = await api.coreExecute(cardId, cardName) as string;
-    console.log('response', cardId, response);
-  });
-})
+init();
